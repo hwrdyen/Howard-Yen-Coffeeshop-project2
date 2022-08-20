@@ -1,0 +1,454 @@
+/* landing css */
+
+/* first container (shared) */
+@use './partials/global' as *;
+
+/* second container */
+.second_container {
+    background-color: $pink_background;
+    width: $viewport-width;
+    padding: 2.5rem 0rem;
+    display: flex;
+    align-items: center;
+}
+
+.secondcontainer {
+    &_left {
+        width: 50vw;
+        margin-right: 10vw;
+        margin-left: 6.2rem;
+        vertical-align: middle;
+        position: relative;
+        left: 0.625rem;
+    }
+
+    &_right {
+        vertical-align: middle;
+        position: relative;
+        right: 3.75rem;
+    }
+
+    &_title {
+        margin: 0rem;
+    }
+
+    &_description {
+        width: 22.5rem;
+        margin: 2rem 0rem;
+    }
+
+    &_buttonelement {
+        width: 13.75rem;
+        height: 4.0625rem;
+        position: relative;
+    }
+    
+    &_buttonlink {
+        text-decoration: none;
+    }
+
+    &_buttonborder {
+        width: 13.125rem;
+        height: 3.75rem;
+        border: 0.125rem solid #393939;
+        position: absolute;
+        bottom: 0.5rem;
+        left: -0.5rem;
+        z-index: 10;
+
+        &:active {
+            position: absolute;
+            bottom: 0rem;
+            left: 0rem;
+        }
+    }
+
+    &_button {
+        font-size: 1.3125rem;
+        font-weight: $fontweight;
+        background-color: $highlight_textcolor;
+        color: $secondary_textcolor;
+        width: 11.25rem;
+        height: 1.75rem;
+        padding: 1.125rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        border: none;
+        position: absolute;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+/* third container */
+.third_container {
+    width: $viewport-width;
+    background-color: $lightgrey_background;
+    padding-bottom: 2rem;
+}
+
+.thirdcontainer{
+    &_title {
+        margin: 0rem;
+        text-align: center;
+        padding: 1.5rem 0rem;
+    }
+
+    &_buttonlink {
+        text-decoration: none;
+    }
+
+    &_buttonelement {
+        width: 11.25rem;
+        height: 4.0625rem;
+        padding: 0.9375rem 0.625rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        position: relative;
+        left: 34.375rem;
+        top: 1.25rem;
+    }
+
+    &_buttonborder {
+        width: 10.9375rem;
+        height: 3.75rem;
+        border: 0.125rem solid #393939;
+        position: absolute;
+        bottom: 1.5rem;
+        right: 1.3rem;
+        z-index: 10;
+
+        &:active {
+            position: absolute;
+            bottom: 0.9rem;
+            right: 0.6rem;
+        }
+    }
+
+    &_button {
+        font-size: 1.3125rem;
+        font-weight: 400;
+        background-color: $highlight_textcolor;
+        color: $secondary_textcolor;
+        border: none;
+        width: 9.375rem;
+        height: 2.1875rem;
+        padding: 0.9375rem 0.9375rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        position: absolute;
+    }
+}
+
+.product {
+    &_section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &_block {
+        width: 18.75rem;
+        height: 25rem;
+        border-radius: 0.625rem;
+        box-shadow: 0rem 0.313rem 0.563rem -0.063rem rgba(0,0,0,0.25);
+        background-color: $secondary_textcolor;
+        margin: 1.25rem;
+        padding: 1.25rem;
+    }
+
+    &_image {
+        height: 15.5rem;
+        padding-left: 32%;
+    }
+
+    &-block {
+        &_description {
+            position: relative;
+            right: 1.25rem;
+            top: 1.25rem;
+            width: 21.25rem;
+            height: 9.375rem;
+            border-bottom-left-radius: 0.625rem;
+            border-bottom-right-radius: 0.625rem;
+            background-color: $pink_background;
+            display: flex;
+            flex-direction: row;
+        }
+
+        &-description{
+            &_left {
+                position: relative;
+                left: 1.25rem;
+                width: 13.4375rem;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    &_title {
+        text-align: center;
+        margin-bottom: 0rem;
+    }
+
+    &_subtitle {
+        margin-top: 0rem;
+        color: #909090;
+    }
+
+    &_price {
+        font-size: 2.0625rem;
+        font-weight: bold;
+        color: $highlight_textcolor;
+        text-align: center;
+        position: relative;
+        top: 1.25rem;
+        left: 3.5625rem;
+        width: 3.5625rem;
+    }
+}
+
+/* animation mixin */
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }   
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+    animation: $animation $duration $method $times;
+}
+
+/* Were Different Container */
+.were {
+    &-different {
+        &_container {
+            width: $viewport-width;
+            height: 530px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 12.5rem;
+            box-sizing: border-box;
+            margin-top: 4rem;
+        }
+
+        &_left {
+            width: 31.25rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-left {
+            &_header {
+                margin-bottom: 0rem;
+            }
+
+            &_description {
+                width: 28.125rem;
+                height: 3.4375rem;
+            }
+
+            &_iconlist {
+                display: flex;
+                flex-direction: row;
+                gap: 10.625rem;
+                margin-bottom: 1.5625rem;
+            }
+
+            &_icon {
+                width: 3.125rem;
+                height: 3.125rem;
+            }
+
+            &_buttonelement {
+                width: 13.75rem;
+                height: 4.375rem;
+                position: relative;
+                top: 0.625rem;
+            }
+
+            &_buttonlink {
+                text-decoration: none;
+            }
+
+            &_buttonborder {
+                width: 12.8125rem;
+                height: 4.0625rem;
+                border: 0.125rem solid #393939;
+                position: absolute;
+                bottom: 0.5rem;
+                right: 1.1875rem;
+                z-index: 10;
+
+                &:active {
+                    position: absolute;
+                    bottom: 0.2rem;
+                    right: 0.8rem;
+                }
+            }
+
+            &_button {
+                width: 9.8rem;
+                background-color: $highlight_textcolor;
+                color: $secondary_textcolor;
+                font-size: 1.4375rem;
+                padding: 1.125rem 1.5625rem;
+                text-decoration: center;
+            }
+        }
+
+        &_right {
+            width: 25rem;
+            height: 25rem;
+            position: relative;
+        }
+
+        &-right {
+            &_imgborder {
+                width: 25rem;
+                height: 25rem;
+                border: 0.3125rem solid $highlight_textcolor;
+                position: absolute;
+                bottom: 1.25rem;
+                right: 1.25rem;
+            }
+
+            &_backgroundimg {
+                width: 25rem;
+                height: 25rem;
+            }
+
+            &_topimg {
+                height: 18.75rem;
+                position: absolute;
+                bottom: 3.4375rem;
+                right: 8.125rem;
+
+
+                &:hover {
+                    cursor: pointer;
+                    @include keyframes(rotate){
+                        from { transform: rotate(0deg); }
+                        to { transform: rotate(360deg); }
+                    }
+
+                    @include animate(rotate, 2s, linear, infinite);
+                }
+            }
+        }
+    }
+}
+
+/* fourth container */
+.fourth_container {
+    width: $viewport-width;
+    box-sizing: border-box;
+    margin: 2rem 0rem 5rem 0rem;
+    padding: 2rem 1.5rem 5rem 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.discount{
+    &_banner {
+        box-sizing: border-box;
+        margin: 3rem 0rem;
+        padding: 2.5rem 1.5rem;
+        font-size: 2.8125rem;
+        text-align: center;
+        width: 69.3125rem;
+        background-color: #393939;
+        color: white;
+
+        @include keyframes(colorchange) {
+            0% {background-color: $primary_textcolor;}
+            50% {background-color: $highlight_textcolor;}
+            100% {background-color: $primary_textcolor;}
+        }
+
+        @include animate(colorchange, 2.5s, linear, infinite);
+    }
+
+    &_bold {
+        font-weight: bold;
+    }
+}
+
+/* fifth container */
+.fifth_container {
+    width: $viewport-width;
+    height: 16.3125rem;
+    background-color: $pink_background;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer {
+    &-coffeebean {
+        &_left {
+            width: 7.5rem;
+            height: 7.5rem;
+            opacity: 25%;
+            position: absolute;
+            top: 1.875rem;
+            left: -2.5rem;
+        }
+
+        &_right {
+            width: 7.5rem;
+            height: 7.5rem;
+            opacity: 25%;
+            position: absolute;
+            top: 7rem;
+            right: -2.5rem;
+        }
+    }
+
+    &_section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 7rem;
+
+        &_address {
+            padding: 1rem 2rem;
+            margin-bottom: 1rem;
+        }
+
+        &_hours {
+            padding: 1rem 2rem;
+            margin-bottom: 1rem;
+        }
+
+        &_social {
+            padding: 1rem 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin: 0rem;
+        }
+    }
+}
+
+.hour_title {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.icon {
+    width: 3.125rem;
+    height: 3.125rem;
+}

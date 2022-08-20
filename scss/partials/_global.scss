@@ -1,0 +1,136 @@
+$fontfamily: 'Open Sans';
+$fontweight: 400;
+$viewport-width: 80rem;
+$primary_textcolor: #393939;
+$secondary_textcolor: #FFFFFF;
+$highlight_textcolor: #5BACC3;
+$pink_background: #FFF0ED;
+$lightgrey_background: #F7F7F7;
+
+body {
+    font-family: $fontfamily;
+    font-weight: $fontweight;
+    width: $viewport-width;
+    margin: 0rem;
+}
+
+.primarytextcolor {
+    color: $primary_textcolor;
+}
+
+.secondarytextcolor {
+    color: $secondary_textcolor;
+}
+
+.highlighttextcolor {
+    color: $highlight_textcolor;
+}
+
+.pink_background {
+    background-color: $pink_background;
+}
+
+.lightgrey_background {
+    background-color: $lightgrey_background;
+}
+
+@mixin font($font_size, $font_weight) {
+    font-size: $font_size;
+    font-weight: $font_weight;
+}
+
+h1 {
+    @include font(3.75rem, 300);
+}
+
+h2 {
+    @include font(3.75rem, 300);
+}
+
+h3 {
+    @include font(2.0625rem, 300);
+}
+
+.regular_paragraph {
+    @include font(1.125rem, 400);
+}
+
+.italicregular_paragraph {
+    @include font(1.125rem, 400);
+    font-style: italic;
+    margin: 0rem;
+}
+
+p {
+    @include font(1.125rem, 400);
+}
+
+/* First Container (Shared) */
+.first_container {
+    width: $viewport-width;
+    background-color: $pink_background;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.25rem 0rem;
+}
+
+.nav {
+    &_headerlink {
+        text-decoration: none;
+        color: black;
+
+        &:visited {
+            color: black;
+        }
+    }
+
+    &_header {
+        font-size: 2.8125rem;
+        font-weight: 300;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0rem;
+    }
+
+}
+
+.firstcontainer_icon {
+    width: 3.125rem;
+    height: 3.125rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+
+.main_nav {
+    display: inline-block;
+    padding: 0rem;
+    padding-top: 1rem;
+    margin: 0rem 0rem 0rem 1rem;
+    vertical-align: middle;
+    position: relative;
+    left: 45rem;
+}
+
+.mainnav {
+    &_list {
+        list-style: none;
+        display: inline;
+        padding: 0rem 1.25rem 0rem 0rem;
+        margin: 0rem;
+    }
+
+    &_link {
+        font-size: 1.3125rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: $primary_textcolor;
+        margin-left: 1rem;
+
+        &_shopnow {
+            color: $highlight_textcolor;
+        }
+    }
+
+}

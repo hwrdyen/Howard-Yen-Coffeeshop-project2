@@ -1,0 +1,172 @@
+/* menu css */
+
+/* first container (shared) */
+@use './partials/global' as *;
+
+/* second container */
+.second {
+    &_container {
+        background-image: url("../assets/images/coffee-circle.jpg");
+        background-size: cover;
+        background-position: center;
+        width: $viewport-width;
+        height: 35.9375rem;
+    }
+
+    &-container {
+        &_MENUblock {
+            width: 17.5rem;
+            height: 11.25rem;
+            position: relative;
+            left: 33.125rem;
+            top: 12.5rem;
+        }
+
+        &_MENUborder {
+            width: 17.5rem;
+            height: 11rem;
+            border: 0.3125rem solid $highlight_textcolor;
+            position: absolute;
+            bottom: 0.9375rem;
+            right: 0.9375rem;
+            z-index: 10;
+        }
+
+        &_MENU {
+            text-align: center;
+            background-color: $primary_textcolor;
+            width: 17.5rem;
+            height: 11rem;
+            color: $secondary_textcolor;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 0.3125rem;
+        }
+    }
+}
+
+/* third container */
+.third_container {
+    box-sizing: border-box;
+    background-color: $primary_textcolor;
+    width: $viewport-width;
+    height: 4.5rem;
+    text-align: center;
+    color: $secondary_textcolor;
+    padding: 0.5rem;
+}
+
+.sub_nav {
+    text-align: center;
+    padding: 0rem;
+    vertical-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.subnav{
+    &_list {
+        float: left;
+        list-style: none;
+        display: inline;
+        padding: 0rem 1.25rem 0rem 1.25rem;
+        border-width: 0rem 0rem 0rem 0.25rem;
+        border-color: $highlight_textcolor;
+        border-style: solid;
+    }
+
+    &_link {
+        color: $secondary_textcolor;
+        font-size: 1.3125rem;
+        font-weight: 400;
+        text-decoration: none;
+
+        &:visited {
+            color: $secondary_textcolor;
+        }
+    }
+}
+
+/* fourth container */
+.fourth_container {
+    width: $viewport-width;
+}
+
+.product_section {
+    padding-bottom: 1rem;
+}
+
+h2.production_title {
+        text-align: center;
+        height: 5.094rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        padding: 1rem 0rem;
+        color: $primary_textcolor;
+        font-weight: 300;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &_title {
+        text-align: center;
+        margin-top: 0.5rem;
+        margin-bottom: 0rem;
+    }
+
+    &_description {
+        text-align: center;
+        display: inline-block;
+        width: 32%;
+        padding-top: 0.5rem;
+    }
+
+    &_price {
+        text-align: center;
+        color: $highlight_textcolor;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        padding: 0.5rem 0rem;
+    }
+
+    &-description {
+        &_inhousebrew {
+            width: 28.4375rem;
+            position: relative;
+        }
+
+        &_espresso {
+            width: 490px;
+            position: relative;
+        }
+
+        &_coldbrew {
+            width: 30.625rem;
+            position: relative;
+        }
+
+        &_icedchailatte {
+            width: 31.25rem;
+            position: relative;
+        }
+
+        &_baconcookie {
+            width: 31.25rem;
+            position: relative;
+        }
+
+        &_blueberrymuffin {
+            width: 31.25rem;
+            position: relative;
+        }
+    }
+}
+
